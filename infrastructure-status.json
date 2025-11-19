@@ -1,0 +1,76 @@
+{
+  "overall": "critical",
+  "components": {
+    "git": {
+      "status": "down",
+      "details": [
+        "Git repository not accessible",
+        "Error: Error: Command failed: git status --porcelain\nfatal: not a git repository (or any of the parent directories): .git\n"
+      ],
+      "lastChecked": "2025-11-19T04:00:50.345Z"
+    },
+    "dependencies": {
+      "status": "up",
+      "details": [
+        "Dependencies installed: Yes",
+        "Lock file present: Yes",
+        "Total scripts: 48"
+      ],
+      "lastChecked": "2025-11-19T04:00:50.345Z"
+    },
+    "contracts": {
+      "status": "up",
+      "details": [
+        "Smart contracts found: 2",
+        "Contracts: CTBALAnalytics.sol, CTBALToken.sol",
+        "Artifacts compiled: Yes"
+      ],
+      "lastChecked": "2025-11-19T04:00:50.345Z"
+    },
+    "environment": {
+      "status": "up",
+      "details": [
+        ".env file: Present",
+        ".env.example file: Present",
+        "Environment variables: 13"
+      ],
+      "lastChecked": "2025-11-19T04:00:50.345Z"
+    },
+    "blockchain": {
+      "status": "up",
+      "details": [
+        "Network: Sepolia Testnet",
+        "CTBALToken: 0xcfab0ab01fd1a4a72601dd30da96fc13b0403246",
+        "CTBALAnalytics: 0x5b07f9bac1f72cbd5ef931f13d00bb87785eab5d",
+        "Etherscan verified: Yes",
+        "Status: Fully operational"
+      ],
+      "lastChecked": "2025-11-19T04:00:50.345Z"
+    },
+    "dataPipeline": {
+      "status": "up",
+      "details": [
+        "Queue manager: Available",
+        "Queue directory: Missing",
+        "Queued CSV files: 0",
+        "Geographic coverage: 53 US states & territories"
+      ],
+      "lastChecked": "2025-11-19T04:00:50.345Z"
+    },
+    "documentation": {
+      "status": "up",
+      "details": [
+        "Documentation files: 5/5",
+        "Present: README.md, CONTRIBUTING.md, LICENSE, SECURITY.md, INFRASTRUCTURE.md"
+      ],
+      "lastChecked": "2025-11-19T04:00:50.345Z"
+    }
+  },
+  "metrics": {
+    "totalComponents": 7,
+    "healthyComponents": 6,
+    "degradedComponents": 0,
+    "criticalComponents": 1,
+    "overallHealthScore": 86
+  }
+}

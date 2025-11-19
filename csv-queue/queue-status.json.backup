@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "test-california.csv",
+    "state": "California",
+    "timestamp": "2025-11-16T01:10:35.109Z",
+    "status": "pending"
+  },
+  {
+    "filename": "test-texas.csv",
+    "state": "Texas",
+    "timestamp": "2025-11-16T01:10:42.330Z",
+    "status": "pending"
+  },
+  {
+    "filename": "us_recent_deaths.csv",
+    "state": "Unknown",
+    "timestamp": "2025-11-18T21:21:05.678Z",
+    "status": "pending"
+  }
+]

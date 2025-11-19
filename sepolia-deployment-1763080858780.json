@@ -1,0 +1,22 @@
+{
+  "network": "sepolia",
+  "chainId": 11155111,
+  "timestamp": "2025-11-14T00:40:58.780Z",
+  "deployer": "0xdB8e11f53A9cd422c9854f438c9CfAB167c3019c",
+  "contracts": {
+    "CTBALToken": {
+      "address": "0x768FF3c861342deE4Cd1E98d753ae060F6431e7c",
+      "name": "Clinical Test Blockchain Token",
+      "symbol": "CTBAL",
+      "totalSupply": "1000000000000000000000000"
+    },
+    "CTBALAnalytics": {
+      "address": "0x65f373045B4FB875415f245aa219067436C38f33",
+      "linkedToken": "0x768FF3c861342deE4Cd1E98d753ae060F6431e7c"
+    }
+  },
+  "etherscan": {
+    "CTBALToken": "https://sepolia.etherscan.io/address/0x768FF3c861342deE4Cd1E98d753ae060F6431e7c",
+    "CTBALAnalytics": "https://sepolia.etherscan.io/address/0x65f373045B4FB875415f245aa219067436C38f33"
+  }
+}

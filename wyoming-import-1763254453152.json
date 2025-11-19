@@ -1,0 +1,36 @@
+{
+  "network": "sepolia",
+  "timestamp": "2025-11-16T00:54:13.151Z",
+  "source": "scrape-a-grave Wyoming mortality data",
+  "contracts": {
+    "CTBALToken": "0xcfab0ab01fd1a4a72601dd30da96fc13b0403246",
+    "CTBALAnalytics": "0x5b07f9bac1f72cbd5ef931f13d00bb87785eab5d"
+  },
+  "results": {
+    "totalRecords": 34,
+    "successfulImports": 34,
+    "failedImports": 0,
+    "tokensAllocated": "8050",
+    "blockchainMetrics": {
+      "totalTests": "34",
+      "totalTokens": "8050"
+    }
+  },
+  "sampleTests": [
+    {
+      "testType": "Geriatric Care Study (Veteran Population)",
+      "tokens": "250",
+      "originalName": "RevJerry Wayne Conley"
+    },
+    {
+      "testType": "Geriatric Care Study",
+      "tokens": "200",
+      "originalName": "Evelyn D Miller"
+    },
+    {
+      "testType": "Mid-Life Health Analysis",
+      "tokens": "300",
+      "originalName": "Roderick Burke Tillman"
+    }
+  ]
+}
