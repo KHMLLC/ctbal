@@ -46,6 +46,7 @@
     "infrastructure:status": "npx tsx scripts/infrastructure-status.ts",
     "infrastructure:deploy": "npm run compile && npm run deploy:sepolia && npm run verify:sepolia",
     "infrastructure:monitor": "npx tsx scripts/infrastructure-monitor.ts",
+    "deployment:readiness": "npx tsx scripts/deployment-readiness.ts",
     "security:audit": "npm audit --audit-level=high",
     "docs:generate": "npx tsx scripts/generate-docs.ts",
     "system:health": "npm run queue:status && npm run dashboard:sepolia",
