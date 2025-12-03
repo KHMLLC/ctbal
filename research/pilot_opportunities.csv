@@ -1,0 +1,46 @@
+Category,Organization,Website,Contact_Type,Study_Focus,Potential_Participants,Regulatory_Level,Implementation_Difficulty,Expected_Duration,Token_Reward_Range,Notes
+Digital Health,Fitbit Health Solutions,https://healthsolutions.fitbit.com/,Corporate Wellness,Fitness Tracker Compliance,1000-10000,Low,Easy,8-12 weeks,50-200 CTBAL,Existing API integration available
+Digital Health,Garmin Health,https://www.garmin.com/en-US/garmin-technology/health-science/,Research Partnerships,Activity Monitoring Studies,500-5000,Low,Easy,6-16 weeks,75-250 CTBAL,Strong developer ecosystem
+Digital Health,Apple ResearchKit,https://www.apple.com/researchkit/,Academic Research,Health App Validation,10000+,Medium,Medium,12-24 weeks,100-400 CTBAL,Large user base but complex integration
+Digital Health,Samsung Health,https://developer.samsung.com/health,Developer Platform,Wellness Intervention Studies,5000+,Low,Medium,8-20 weeks,50-300 CTBAL,Global reach with Samsung devices
+Digital Health,Oura Ring Research,https://ouraring.com/research,Sleep & Recovery Studies,Sleep Quality Interventions,1000-3000,Low,Medium,4-12 weeks,100-350 CTBAL,High-quality biometric data
+Nutraceuticals,Council for Responsible Nutrition,https://www.crnusa.org/,Industry Association,Supplement Efficacy Studies,500-2000,Low,Easy,4-8 weeks,75-200 CTBAL,Self-regulating industry standards
+Nutraceuticals,Natural Products Association,https://www.npainfo.org/,Trade Organization,Natural Health Research,300-1500,Low,Easy,6-12 weeks,100-250 CTBAL,Focus on consumer safety
+Nutraceuticals,Examine.com Research Database,https://examine.com/,Evidence Database,Supplement Research Validation,N/A,Low,Easy,Ongoing,N/A,Comprehensive supplement research database
+Lifestyle Interventions,American College of Lifestyle Medicine,https://www.lifestylemedicine.org/,Medical Association,Diet & Exercise Studies,2000-8000,Low,Easy,8-24 weeks,100-400 CTBAL,Physician-led lifestyle interventions
+Lifestyle Interventions,National Wellness Institute,https://nationalwellness.org/,Wellness Organization,Workplace Wellness Programs,5000-15000,Low,Easy,12-52 weeks,150-500 CTBAL,Corporate wellness focus
+Lifestyle Interventions,Precision Nutrition,https://www.precisionnutrition.com/,Nutrition Coaching,Behavior Change Studies,1000-5000,Low,Medium,12-24 weeks,200-600 CTBAL,Data-driven nutrition coaching
+Preventive Care,CDC Community Health,https://www.cdc.gov/communityhealth/,Public Health,Screening Compliance Studies,10000+,Medium,Medium,6-12 months,200-800 CTBAL,Government health initiatives
+Preventive Care,American Preventive Medicine Association,https://www.apma.org/,Medical Association,Early Detection Programs,3000-10000,Medium,Medium,3-12 months,250-750 CTBAL,Focus on preventive interventions
+Preventive Care,US Preventive Services Task Force,https://www.uspreventiveservicestaskforce.org/,Clinical Guidelines,Screening Effectiveness,5000+,High,Hard,12-36 months,300-1000 CTBAL,Evidence-based preventive care
+Cognitive Health,Lumosity Research,https://www.lumosity.com/en/research/,Brain Training Research,Cognitive Training Effectiveness,10000+,Low,Medium,4-16 weeks,100-400 CTBAL,Established brain training platform
+Cognitive Health,Cambridge Brain Sciences,https://www.cambridgebrainsciences.com/,Cognitive Assessment,Brain Health Monitoring,1000-5000,Low,Medium,8-24 weeks,150-500 CTBAL,Scientific cognitive assessments
+Cognitive Health,Neurotrack,https://neurotrack.com/,Early Detection,Cognitive Decline Prevention,2000-8000,Medium,Medium,12-36 weeks,200-700 CTBAL,FDA-cleared cognitive assessments
+Academic Partners,Stanford Medicine 25,https://stanford25.stanford.edu/,Medical Education,Clinical Skills Assessment,500-2000,Medium,Medium,6-18 months,300-800 CTBAL,Focus on clinical education
+Academic Partners,Harvard T.H. Chan School,https://www.hsph.harvard.edu/,Public Health Research,Population Health Studies,5000+,Medium,Hard,12-36 months,400-1200 CTBAL,Large-scale epidemiological studies
+Academic Partners,Johns Hopkins Digital Health,https://www.hopkinsmedicine.org/,Clinical Research,Digital Therapeutics,1000-5000,High,Hard,6-24 months,500-1500 CTBAL,Leading medical research institution
+Academic Partners,Mayo Clinic Innovation,https://www.mayo.edu/research/,Healthcare Innovation,Clinical Technology Validation,2000-10000,High,Hard,12-48 months,600-2000 CTBAL,Comprehensive healthcare research
+Corporate Wellness,Virgin Pulse,https://www.virginpulse.com/,Employee Wellness,Workplace Health Programs,50000+,Low,Easy,6-18 months,100-500 CTBAL,Large corporate wellness platform
+Corporate Wellness,Welltok,https://welltok.com/,Population Health,Personalized Wellness,25000+,Low,Easy,3-12 months,75-400 CTBAL,AI-driven wellness solutions
+Corporate Wellness,Thrive Global,https://thriveglobal.com/,Behavioral Change,Well-being Interventions,10000+,Low,Easy,4-16 weeks,100-350 CTBAL,Focus on sustainable behavior change
+Healthcare Systems,Kaiser Permanente Research,https://www.kpwashingtonresearch.org/,Integrated Healthcare,Population Health Studies,100000+,High,Hard,6-60 months,300-1500 CTBAL,Large integrated health system
+Healthcare Systems,Geisinger Health System,https://www.geisinger.org/research,Clinical Research,Healthcare Innovation,50000+,High,Hard,12-48 months,400-1200 CTBAL,Pioneer in value-based care
+Healthcare Systems,Intermountain Healthcare,https://intermountainhealthcare.org/research/,Clinical Research,Evidence-based Care,75000+,High,Hard,6-36 months,350-1000 CTBAL,Focus on clinical excellence
+Technology Platforms,Validic,https://validic.com/,Health Data Platform,Remote Patient Monitoring,Variable,Medium,Medium,3-18 months,200-600 CTBAL,Healthcare data integration platform
+Technology Platforms,HealthTap,https://www.healthtap.com/,Telemedicine Platform,Virtual Care Studies,100000+,Medium,Medium,6-24 months,150-500 CTBAL,AI-powered healthcare platform
+Technology Platforms,Teladoc Health,https://www.teladochealth.com/,Virtual Healthcare,Telehealth Effectiveness,1000000+,High,Hard,12-36 months,300-1000 CTBAL,Leading telemedicine provider
+Regulatory Bodies,FDA Innovation Task Force,https://www.fda.gov/about-fda/,Regulatory Guidance,Digital Health Regulation,N/A,High,Hard,Variable,N/A,Government regulatory guidance
+Regulatory Bodies,Digital Medicine Society,https://www.dimesociety.org/,Industry Standards,Digital Health Evidence,N/A,Medium,Medium,Variable,N/A,Digital medicine best practices
+Regulatory Bodies,Healthcare Information Management Systems Society,https://www.himss.org/,Health IT Standards,Healthcare Technology,N/A,Medium,Medium,Variable,N/A,Healthcare technology standards
+Patient Communities,PatientsLikeMe,https://www.patientslikeme.com/,Patient Network,Real-world Evidence,700000+,Medium,Medium,6-24 months,200-700 CTBAL,Large patient community platform
+Patient Communities,Smart Patients,https://www.smartpatients.com/,Cancer Community,Patient-reported Outcomes,100000+,Medium,Medium,3-18 months,250-800 CTBAL,Focus on cancer patient support
+Patient Communities,Crohnology,https://crohnology.com/,IBD Community,Inflammatory Bowel Disease Studies,50000+,Medium,Medium,6-36 months,300-900 CTBAL,Specialized disease community
+Wearable Manufacturers,Polar,https://www.polar.com/us-en/b2b_products/,Fitness Technology,Heart Rate Monitoring Studies,Variable,Low,Easy,4-12 weeks,75-250 CTBAL,Professional fitness monitoring
+Wearable Manufacturers,Whoop,https://www.whoop.com/,Recovery Optimization,Athletic Performance Studies,500000+,Low,Medium,8-24 weeks,150-500 CTBAL,Focus on recovery and strain
+Wearable Manufacturers,Biostrap,https://biostrap.com/,Advanced Biometrics,Detailed Health Monitoring,Variable,Low,Medium,6-18 weeks,200-600 CTBAL,Research-grade biometric data
+Research Networks,Patient-Centered Outcomes Research Institute,https://www.pcori.org/,Comparative Effectiveness,Patient-centered Research,Variable,High,Hard,12-60 months,500-2000 CTBAL,Government-funded patient outcomes research
+Research Networks,All of Us Research Program,https://allofusresearch.nih.gov/,Precision Medicine,Large-scale Health Studies,1000000+,High,Hard,12-120 months,400-1500 CTBAL,NIH precision medicine initiative
+Research Networks,UK Biobank,https://www.ukbiobank.ac.uk/,Population Health,Long-term Health Studies,500000+,High,Hard,60-240 months,600-2500 CTBAL,Large-scale longitudinal study
+Clinical Trial Networks,Clinical Trials Network,https://clinicaltrials.gov/,Trial Registry,Clinical Research Database,N/A,High,Hard,Variable,Variable,Government clinical trials database
+Clinical Trial Networks,Association of Clinical Research Organizations,https://www.acrohealth.org/,Industry Association,Clinical Research Standards,N/A,High,Hard,Variable,N/A,Clinical research organization standards
+Clinical Trial Networks,Society for Clinical Research Sites,https://myscrs.org/,Research Sites,Clinical Trial Operations,N/A,High,Hard,Variable,N/A,Clinical research site network

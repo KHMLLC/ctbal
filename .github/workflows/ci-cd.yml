@@ -1,3 +1,9 @@
+# CTBAL Healthcare Blockchain CI/CD Pipeline
+# Required GitHub Secrets:
+# - SEPOLIA_URL: Sepolia testnet RPC endpoint (https://sepolia.infura.io/v3/YOUR_KEY)
+# - PRIVATE_KEY: Deployment wallet private key (0x...)
+# - ETHERSCAN_API_KEY: Etherscan API key for contract verification
+
 name: CTBAL CI/CD Pipeline
 
 on:
@@ -50,6 +56,23 @@ jobs:
     - name: Install dependencies
       run: npm ci
       
+    - name: Validate secrets
+      run: |
+        if [ -z "$SEPOLIA_URL" ]; then
+          echo "❌ SEPOLIA_URL secret is not set"
+          echo "Please add SEPOLIA_URL to GitHub repository secrets"
+          exit 1
+        fi
+        if [ -z "$PRIVATE_KEY" ]; then
+          echo "❌ PRIVATE_KEY secret is not set"
+          echo "Please add PRIVATE_KEY to GitHub repository secrets"
+          exit 1
+        fi
+        echo "✅ All deployment secrets are configured"
+      env:
+        SEPOLIA_URL: ${{ secrets.SEPOLIA_URL || '' }}
+        PRIVATE_KEY: ${{ secrets.PRIVATE_KEY || '' }}
+        
     - name: Deploy to Sepolia
       env:
         SEPOLIA_URL: ${{ secrets.SEPOLIA_URL }}

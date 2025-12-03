@@ -1,0 +1,412 @@
+{
+  "processingTimestamp": "2025-11-25T19:54:42.288Z",
+  "mode": "dry-run",
+  "sourceFile": "mortality_data_nationwide.csv",
+  "totalRecords": 9346,
+  "currentBlockchainTests": 34,
+  "newTestIdRange": "35 to 9380",
+  "totalTokenAllocation": "2233900",
+  "statesCovered": 52,
+  "stateBreakdown": {
+    "Alabama": {
+      "count": 836,
+      "tokens": "205650"
+    },
+    "Alaska": {
+      "count": 43,
+      "tokens": "10200"
+    },
+    "Arizona": {
+      "count": 401,
+      "tokens": "92600"
+    },
+    "Arkansas": {
+      "count": 269,
+      "tokens": "65750"
+    },
+    "California": {
+      "count": 191,
+      "tokens": "45700"
+    },
+    "Colorado": {
+      "count": 115,
+      "tokens": "27700"
+    },
+    "Connecticut": {
+      "count": 129,
+      "tokens": "30300"
+    },
+    "Delaware": {
+      "count": 31,
+      "tokens": "7900"
+    },
+    "District of Columbia": {
+      "count": 1,
+      "tokens": "250"
+    },
+    "Florida": {
+      "count": 150,
+      "tokens": "35550"
+    },
+    "Georgia": {
+      "count": 587,
+      "tokens": "144300"
+    },
+    "Hawaii": {
+      "count": 20,
+      "tokens": "4400"
+    },
+    "Idaho": {
+      "count": 48,
+      "tokens": "11500"
+    },
+    "Illinois": {
+      "count": 124,
+      "tokens": "28650"
+    },
+    "Indiana": {
+      "count": 260,
+      "tokens": "60800"
+    },
+    "Iowa": {
+      "count": 292,
+      "tokens": "69650"
+    },
+    "Kansas": {
+      "count": 58,
+      "tokens": "13800"
+    },
+    "Kentucky": {
+      "count": 363,
+      "tokens": "89300"
+    },
+    "Louisiana": {
+      "count": 277,
+      "tokens": "67350"
+    },
+    "Maine": {
+      "count": 135,
+      "tokens": "31550"
+    },
+    "Maryland": {
+      "count": 63,
+      "tokens": "14450"
+    },
+    "Massachusetts": {
+      "count": 217,
+      "tokens": "50500"
+    },
+    "Michigan": {
+      "count": 222,
+      "tokens": "51350"
+    },
+    "Minnesota": {
+      "count": 306,
+      "tokens": "70250"
+    },
+    "Mississippi": {
+      "count": 235,
+      "tokens": "57500"
+    },
+    "Missouri": {
+      "count": 322,
+      "tokens": "76500"
+    },
+    "Montana": {
+      "count": 34,
+      "tokens": "8750"
+    },
+    "Nebraska": {
+      "count": 130,
+      "tokens": "30800"
+    },
+    "Nevada": {
+      "count": 11,
+      "tokens": "2700"
+    },
+    "New Hampshire": {
+      "count": 65,
+      "tokens": "15050"
+    },
+    "New Jersey": {
+      "count": 196,
+      "tokens": "44900"
+    },
+    "New Mexico": {
+      "count": 65,
+      "tokens": "16300"
+    },
+    "New York": {
+      "count": 375,
+      "tokens": "86100"
+    },
+    "North Carolina": {
+      "count": 537,
+      "tokens": "128350"
+    },
+    "North Dakota": {
+      "count": 71,
+      "tokens": "17150"
+    },
+    "Ohio": {
+      "count": 164,
+      "tokens": "38800"
+    },
+    "Oklahoma": {
+      "count": 209,
+      "tokens": "52650"
+    },
+    "Oregon": {
+      "count": 23,
+      "tokens": "5400"
+    },
+    "Pennsylvania": {
+      "count": 279,
+      "tokens": "65000"
+    },
+    "Puerto Rico": {
+      "count": 12,
+      "tokens": "2700"
+    },
+    "Rhode Island": {
+      "count": 69,
+      "tokens": "16300"
+    },
+    "South Carolina": {
+      "count": 321,
+      "tokens": "79100"
+    },
+    "South Dakota": {
+      "count": 110,
+      "tokens": "27450"
+    },
+    "Tennessee": {
+      "count": 122,
+      "tokens": "29850"
+    },
+    "Texas": {
+      "count": 244,
+      "tokens": "57300"
+    },
+    "Utah": {
+      "count": 109,
+      "tokens": "26100"
+    },
+    "Vermont": {
+      "count": 31,
+      "tokens": "7600"
+    },
+    "Virginia": {
+      "count": 79,
+      "tokens": "18250"
+    },
+    "Washington": {
+      "count": 67,
+      "tokens": "15950"
+    },
+    "West Virginia": {
+      "count": 158,
+      "tokens": "38350"
+    },
+    "Wisconsin": {
+      "count": 135,
+      "tokens": "31350"
+    },
+    "Wyoming": {
+      "count": 35,
+      "tokens": "8200"
+    }
+  },
+  "sampleTests": [
+    {
+      "testType": "Geriatric Care Study - Alabama",
+      "patientAddress": "0xAL416d617200000000000000000000000000",
+      "dataHash": "QmNationwide-7b226e616d65223a22416d6172796c6c69732042",
+      "metadataHash": "QmMeta-Consolidated-Alabama-19abc9524bd",
+      "tokenAllocation": "200",
+      "state": "Alabama",
+      "originalRecord": {
+        "name": "Amaryllis Bo Brown Foster",
+        "city": "Holtville",
+        "county": "Elmore County",
+        "state": "Alabama",
+        "birthDate": "4/14/1932",
+        "deathDate": "10/26/2024",
+        "updated": "11/24/2025",
+        "age": 92
+      },
+      "ageCategory": "75+ (Geriatric)"
+    },
+    {
+      "testType": "Mid-Life Health Analysis - Alabama",
+      "patientAddress": "0xAL4261726200000000000000000000000000",
+      "dataHash": "QmNationwide-7b226e616d65223a224261726261726120416e6e",
+      "metadataHash": "QmMeta-Consolidated-Alabama-19abc9524bd",
+      "tokenAllocation": "300",
+      "state": "Alabama",
+      "originalRecord": {
+        "name": "Barbara Ann Kennebrew",
+        "city": "",
+        "county": "",
+        "state": "Alabama",
+        "birthDate": "10/23/1958",
+        "deathDate": "5/19/2025",
+        "updated": "11/24/2025",
+        "age": 66
+      },
+      "ageCategory": "50-74 (Mid-Life)"
+    },
+    {
+      "testType": "Geriatric Care Study - Alabama",
+      "patientAddress": "0xAL4d69636800000000000000000000000000",
+      "dataHash": "QmNationwide-7b226e616d65223a224d69636861656c20506175",
+      "metadataHash": "QmMeta-Consolidated-Alabama-19abc9524bd",
+      "tokenAllocation": "200",
+      "state": "Alabama",
+      "originalRecord": {
+        "name": "Michael Paul Mc Connell",
+        "city": "",
+        "county": "",
+        "state": "Alabama",
+        "birthDate": "2/3/1945",
+        "deathDate": "4/9/2025",
+        "updated": "11/24/2025",
+        "age": 80
+      },
+      "ageCategory": "75+ (Geriatric)"
+    },
+    {
+      "testType": "Geriatric Care Study - Alabama",
+      "patientAddress": "0xAL4a616d6500000000000000000000000000",
+      "dataHash": "QmNationwide-7b226e616d65223a224a616d6573205261796d6f",
+      "metadataHash": "QmMeta-Consolidated-Alabama-19abc9524bd",
+      "tokenAllocation": "200",
+      "state": "Alabama",
+      "originalRecord": {
+        "name": "James Raymond Trenam",
+        "city": "",
+        "county": "",
+        "state": "Alabama",
+        "birthDate": "4/21/1950",
+        "deathDate": "8/2/2025",
+        "updated": "11/24/2025",
+        "age": 75
+      },
+      "ageCategory": "75+ (Geriatric)"
+    },
+    {
+      "testType": "Mid-Life Health Analysis - Alabama",
+      "patientAddress": "0xAL4368617200000000000000000000000000",
+      "dataHash": "QmNationwide-7b226e616d65223a22436861726c6573204d6178",
+      "metadataHash": "QmMeta-Consolidated-Alabama-19abc9524bd",
+      "tokenAllocation": "300",
+      "state": "Alabama",
+      "originalRecord": {
+        "name": "Charles Max Brown",
+        "city": "",
+        "county": "",
+        "state": "Alabama",
+        "birthDate": "3/18/1952",
+        "deathDate": "8/29/2025",
+        "updated": "11/24/2025",
+        "age": 73
+      },
+      "ageCategory": "50-74 (Mid-Life)"
+    },
+    {
+      "testType": "Mid-Life Health Analysis - Alabama",
+      "patientAddress": "0xAL4c796e6400000000000000000000000000",
+      "dataHash": "QmNationwide-7b226e616d65223a224c796e6461204461726c65",
+      "metadataHash": "QmMeta-Consolidated-Alabama-19abc9524bd",
+      "tokenAllocation": "300",
+      "state": "Alabama",
+      "originalRecord": {
+        "name": "Lynda Darlene Mobbs Hanson",
+        "city": "",
+        "county": "",
+        "state": "Alabama",
+        "birthDate": "9/18/1967",
+        "deathDate": "9/30/2025",
+        "updated": "11/24/2025",
+        "age": 58
+      },
+      "ageCategory": "50-74 (Mid-Life)"
+    },
+    {
+      "testType": "Geriatric Care Study - Alabama",
+      "patientAddress": "0xAL4661796500000000000000000000000000",
+      "dataHash": "QmNationwide-7b226e616d65223a22466179652056616e636520",
+      "metadataHash": "QmMeta-Consolidated-Alabama-19abc9524bd",
+      "tokenAllocation": "200",
+      "state": "Alabama",
+      "originalRecord": {
+        "name": "Faye Vance Abney",
+        "city": "",
+        "county": "",
+        "state": "Alabama",
+        "birthDate": "9/1/1938",
+        "deathDate": "10/12/2025",
+        "updated": "11/24/2025",
+        "age": 87
+      },
+      "ageCategory": "75+ (Geriatric)"
+    },
+    {
+      "testType": "Geriatric Care Study - Alabama",
+      "patientAddress": "0xAL4361726f00000000000000000000000000",
+      "dataHash": "QmNationwide-7b226e616d65223a224361726f6c796e20416e6e",
+      "metadataHash": "QmMeta-Consolidated-Alabama-19abc9524bd",
+      "tokenAllocation": "200",
+      "state": "Alabama",
+      "originalRecord": {
+        "name": "Carolyn Ann Langston Mann",
+        "city": "Jasper",
+        "county": "Walker County",
+        "state": "Alabama",
+        "birthDate": "9/22/1939",
+        "deathDate": "10/26/2025",
+        "updated": "11/24/2025",
+        "age": 86
+      },
+      "ageCategory": "75+ (Geriatric)"
+    },
+    {
+      "testType": "Mid-Life Health Analysis - Alabama",
+      "patientAddress": "0xAL41204a6f00000000000000000000000000",
+      "dataHash": "QmNationwide-7b226e616d65223a2241204a6f73657068205068",
+      "metadataHash": "QmMeta-Consolidated-Alabama-19abc9524bd",
+      "tokenAllocation": "300",
+      "state": "Alabama",
+      "originalRecord": {
+        "name": "A Joseph Phillips",
+        "city": "Boaz",
+        "county": "Marshall County",
+        "state": "Alabama",
+        "birthDate": "6/2/1961",
+        "deathDate": "10/25/2025",
+        "updated": "11/24/2025",
+        "age": 64
+      },
+      "ageCategory": "50-74 (Mid-Life)"
+    },
+    {
+      "testType": "Geriatric Care Study - Alabama",
+      "patientAddress": "0xAL526f626500000000000000000000000000",
+      "dataHash": "QmNationwide-7b226e616d65223a22526f626572742045756765",
+      "metadataHash": "QmMeta-Consolidated-Alabama-19abc9524bd",
+      "tokenAllocation": "200",
+      "state": "Alabama",
+      "originalRecord": {
+        "name": "Robert Eugene Anderson",
+        "city": "Tuscaloosa",
+        "county": "Tuscaloosa County",
+        "state": "Alabama",
+        "birthDate": "3/14/1931",
+        "deathDate": "11/5/2025",
+        "updated": "11/24/2025",
+        "age": 94
+      },
+      "ageCategory": "75+ (Geriatric)"
+    }
+  ]
+}

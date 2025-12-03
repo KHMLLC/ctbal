@@ -1,0 +1,80 @@
+{
+  "timestamp": "2025-12-03T18:05:46.593Z",
+  "network": "sepolia",
+  "contracts": {
+    "token": "0x386b7e934f1cfd8169bf8b9d5249ba1ed7e1926f",
+    "analytics": "0x4ba62466265d6d3853cff74b910e5b7ab13aaea1"
+  },
+  "csvData": {
+    "totalRecords": 10794,
+    "sampleSize": 1000,
+    "completeRecords": 910,
+    "veterans": 0,
+    "ageDistribution": {
+      "under50": 74,
+      "age50to74": 234,
+      "age75plus": 615,
+      "unknown": 77
+    },
+    "topStates": [
+      [
+        "Alabama",
+        359
+      ],
+      [
+        "Arkansas",
+        290
+      ],
+      [
+        "Arizona",
+        228
+      ],
+      [
+        "California",
+        60
+      ],
+      [
+        "Colorado",
+        58
+      ]
+    ],
+    "topCounties": [
+      [
+        "Maricopa County, Arizona",
+        130
+      ],
+      [
+        "Pima County, Arizona",
+        66
+      ],
+      [
+        "Mobile County, Alabama",
+        25
+      ],
+      [
+        "Shelby County, Alabama",
+        25
+      ],
+      [
+        "Washington County, Arkansas",
+        23
+      ]
+    ]
+  },
+  "deployment": null,
+  "scaling": {
+    "remainingRecords": 10694,
+    "projectedTotalTokens": 3912825,
+    "estimatedCostETH": "42.7760",
+    "totalBatches": 214,
+    "estimatedTimeHours": "17.8"
+  },
+  "recommendations": {
+    "readyForFullScale": true,
+    "confidence": "High",
+    "riskLevel": "Low",
+    "nextPhase": "Continue batch deployment"
+  },
+  "status": "SUCCESSFUL_INITIAL_DEPLOYMENT",
+  "readiness": "READY_FOR_FULL_SCALE"
+}

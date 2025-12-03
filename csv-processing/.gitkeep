@@ -1,0 +1,5 @@
+# CSV Processing Directory
+
+This file ensures the csv-processing directory is preserved in git.
+
+Place your CSV files here for batch import into CTBAL.

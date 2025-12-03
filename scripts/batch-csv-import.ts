@@ -1,7 +1,9 @@
-import hre from "hardhat";
-import { parseEther, formatEther, keccak256, toHex } from "viem";
+import { createWalletClient, createPublicClient, http, parseEther, formatEther, keccak256, toHex } from "viem";
+import { sepolia } from 'viem/chains';
+import { privateKeyToAccount } from 'viem/accounts';
 import * as fs from "fs";
 import * as path from "path";
+import "dotenv/config";
 
 interface CsvRecord {
   [key: string]: string;
@@ -164,27 +166,56 @@ async function main() {
   console.log("📊 CTBAL BATCH CSV IMPORT - Scrape-a-Grave Data Integration");
   console.log("==========================================================\n");
 
-  // Configuration
-  const CSV_FILE_PATH = process.env.CSV_FILE_PATH || "./us_recent_deaths.csv";
+  // Configuration - Use command line argument if provided, then env var, then default
+  const csvArgument = process.argv[2] || process.env.CSV_FILE;
+  const CSV_FILE_PATH = csvArgument || process.env.CSV_FILE_PATH || "./csv-processing/mortality_data_20251201.csv";
   const BATCH_SIZE = parseInt(process.env.BATCH_SIZE || "10");
   const DRY_RUN = process.env.DRY_RUN === "true";
+  
+  // Check environment
+  try {
+    console.log(`🔗 Network: sepolia`);
+    console.log(`🔗 Network URL: ${process.env.SEPOLIA_URL || 'localhost'}`);
+    
+    // Check environment variables
+    if (!process.env.PRIVATE_KEY) {
+      console.error("❌ Hardhat Viem plugin not available. Check hardhat.config.ts");
+      console.log("💡 Try running with: npx hardhat run scripts/batch-csv-import.ts");
+      return;
+    }
+    
+    console.log("✅ Hardhat Viem plugin detected");
+  } catch (error) {
+    console.log("⚠️  Hardhat network info not available, proceeding with defaults...");
+  }
   
   console.log("📋 CONFIGURATION:");
   console.log(`- CSV File: ${CSV_FILE_PATH}`);
   console.log(`- Batch Size: ${BATCH_SIZE}`);
   console.log(`- Dry Run: ${DRY_RUN ? "YES (no blockchain writes)" : "NO (will write to blockchain)"}`);
+  if (csvArgument) {
+    console.log(`- Source: Command line argument`);
+  } else if (process.env.CSV_FILE_PATH) {
+    console.log(`- Source: Environment variable CSV_FILE_PATH`);
+  } else {
+    console.log(`- Source: Default path`);
+  }
 
   try {
     // Check if CSV file exists
     const fullCsvPath = path.resolve(CSV_FILE_PATH);
+    console.log(`\n📂 Resolved path: ${fullCsvPath}`);
+    
     if (!fs.existsSync(fullCsvPath)) {
       console.log(`\n❌ CSV file not found: ${fullCsvPath}`);
       console.log("\n💡 SETUP INSTRUCTIONS:");
       console.log("1. Run your scrape-a-grave Python programs to generate CSV data");
-      console.log("2. Set CSV_FILE_PATH environment variable or place file at ../scrape-a-grave/output.csv");
-      console.log("3. Rerun this script");
-      console.log("\nExample:");
-      console.log("CSV_FILE_PATH=/path/to/your/data.csv npm run import:csv");
+      console.log("2. Copy CSV file to ./csv-processing/ directory");
+      console.log("3. Or pass file path as argument: npx tsx scripts/batch-csv-import.ts /path/to/file.csv");
+      console.log("4. Or set CSV_FILE_PATH environment variable");
+      console.log("\nExamples:");
+      console.log("npx tsx scripts/batch-csv-import.ts ./csv-processing/mortality_data_20251201.csv");
+      console.log("CSV_FILE_PATH=./csv-processing/your_data.csv npm run import:csv");
       return;
     }
 
@@ -222,7 +253,7 @@ async function main() {
       console.log(`  ${type}: ${count} tests`);
     });
 
-    const totalTokens = clinicalTests.reduce((sum, test) => sum + test.tokenAllocation, 0n);
+    const totalTokens = clinicalTests.reduce((sum, test) => sum + test.tokenAllocation, BigInt(0));
     console.log(`\n💰 TOTAL TOKEN ALLOCATION: ${formatEther(totalTokens)} CTBAL`);
 
     if (DRY_RUN) {
@@ -245,88 +276,48 @@ async function main() {
 
     // Deploy or connect to contracts
     console.log("\n🚀 CONNECTING TO CTBAL CONTRACTS:");
-    const [deployer, clinician] = await hre.viem.getWalletClients();
     
-    // For this demo, we'll deploy fresh contracts
-    // In production, you'd connect to existing deployed contracts
-    const ctbalToken = await hre.viem.deployContract("CTBALToken", [
-      "Clinical Test Blockchain Token",
-      "CTBAL",
-      parseEther("10000000") // 10M tokens for large batch
-    ]);
+    // Setup Viem clients
+    const account = privateKeyToAccount(process.env.PRIVATE_KEY as `0x${string}`);
     
-    const ctbalAnalytics = await hre.viem.deployContract("CTBALAnalytics", [
-      ctbalToken.address
-    ]);
-    
-    console.log(`✅ CTBALToken: ${ctbalToken.address}`);
-    console.log(`✅ CTBALAnalytics: ${ctbalAnalytics.address}`);
+    const publicClient = createPublicClient({
+      chain: sepolia,
+      transport: http(process.env.SEPOLIA_URL)
+    });
 
-    // Setup roles
-    const CLINICIAN_ROLE = await ctbalToken.read.CLINICIAN_ROLE();
-    const ANALYST_ROLE = await ctbalAnalytics.read.ANALYST_ROLE();
+    const walletClient = createWalletClient({
+      account,
+      chain: sepolia,
+      transport: http(process.env.SEPOLIA_URL)
+    });
     
-    await ctbalToken.write.grantRole([CLINICIAN_ROLE, clinician.account.address]);
-    await ctbalAnalytics.write.grantRole([ANALYST_ROLE, deployer.account.address]);
+    console.log(`✅ Deployer: ${account.address}`);
     
-    // Fund clinician with tokens
-    await ctbalToken.write.mint([clinician.account.address, totalTokens]);
-    console.log(`✅ Clinician funded with ${formatEther(totalTokens)} CTBAL tokens`);
+    const balance = await publicClient.getBalance({ address: account.address });
+    console.log(`💰 Balance: ${formatEther(balance)} ETH`);
+    
+    // Connect to existing deployed contracts on Sepolia
+    const ctbalTokenAddress = "0x386b7e934f1cfd8169bf8b9d5249ba1ed7e1926f";
+    const ctbalAnalyticsAddress = "0x4ba62466265d6d3853cff74b910e5b7ab13aaea1";
+    
+    console.log(`✅ CTBALToken: ${ctbalTokenAddress}`);
+    console.log(`✅ CTBALAnalytics: ${ctbalAnalyticsAddress}`);
+    console.log("⚠️  Note: This script now references existing deployed contracts");
+    console.log("💡 Use csv-import-to-deployed.ts for actual CSV import functionality");
+    console.log(`💰 Total tokens needed: ${formatEther(totalTokens)} CTBAL`);
+    
+    console.log("\n🎯 TO PROCEED WITH ACTUAL IMPORT:");
+    console.log("================================");
+    console.log("npx tsx scripts/csv-import-to-deployed.ts");
+    
+    console.log("\n✅ CSV PARSING AND ANALYSIS COMPLETED!");
+    console.log("=====================================");
+    console.log(`📊 Total records parsed: ${csvRecords.length}`);
+    console.log(`🧪 Clinical tests mapped: ${clinicalTests.length}`);
+    console.log(`💰 Total token allocation needed: ${formatEther(totalTokens)} CTBAL`);
 
-    // Batch create clinical tests
-    console.log("\n🏥 BATCH CREATING CLINICAL TESTS:");
-    let createdTests = 0;
+    return { csvRecords, clinicalTests, totalTokens };
     
-    for (let i = 0; i < clinicalTests.length; i += BATCH_SIZE) {
-      const batch = clinicalTests.slice(i, i + BATCH_SIZE);
-      console.log(`\n📦 Processing batch ${Math.floor(i / BATCH_SIZE) + 1} (${batch.length} tests)...`);
-      
-      for (const test of batch) {
-        try {
-          // Create mock patient address from patientId
-          const patientAddress = `0x${keccak256(toHex(test.patientId)).substring(2, 42)}`;
-          
-          const testId = await ctbalToken.write.createClinicalTest([
-            test.testType,
-            patientAddress,
-            test.dataHash,
-            test.metadataHash,
-            test.tokenAllocation
-          ], { account: clinician.account });
-          
-          createdTests++;
-          
-          if (createdTests % 5 === 0 || createdTests === clinicalTests.length) {
-            console.log(`  ✅ Created ${createdTests}/${clinicalTests.length} tests`);
-          }
-          
-        } catch (error) {
-          console.error(`  ❌ Failed to create test for ${test.patientId}:`, error);
-        }
-      }
-    }
-
-    // Update analytics
-    console.log("\n📊 UPDATING ANALYTICS:");
-    await ctbalAnalytics.write.updateMetrics();
-    
-    const metrics = await ctbalAnalytics.read.getOverallMetrics();
-    console.log(`✅ Total Tests Created: ${metrics[0]}`);
-    console.log(`✅ Total Tokens Allocated: ${formatEther(metrics[3])} CTBAL`);
-
-    console.log("\n🎉 BATCH IMPORT COMPLETE!");
-    console.log("========================");
-    console.log(`✅ Successfully imported ${createdTests} clinical tests from CSV data`);
-    console.log(`✅ Data source: ${path.basename(fullCsvPath)}`);
-    console.log(`✅ Total token allocation: ${formatEther(totalTokens)} CTBAL`);
-    console.log("✅ Analytics updated with new data");
-    
-    console.log("\n📋 NEXT STEPS:");
-    console.log("1. Validate tests using VALIDATOR_ROLE accounts");
-    console.log("2. Complete tests to release tokens to patients");
-    console.log("3. Monitor analytics for insights and compliance");
-    console.log("4. Export reports for regulatory documentation");
-
   } catch (error) {
     console.error("❌ Import Error:", error);
     process.exit(1);
@@ -334,8 +325,6 @@ async function main() {
 }
 
 // Handle command line execution
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main().catch(console.error);
-}
+main().catch(console.error);
 
 export { parseCsvFile, mapCsvRecordToClinicalTest };

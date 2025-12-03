@@ -102,11 +102,11 @@ async function main() {
           const testDetails = await publicClient.readContract({
             address: SEPOLIA_CONTRACTS.CTBALToken,
             abi: CTBALTokenArtifact.abi,
-            functionName: 'getTestDetails',
+            functionName: 'getClinicalTest',
             args: [BigInt(i)],
           });
 
-          const [testType, , , , tokenAllocation] = testDetails as [string, string, string, string, bigint, boolean, boolean];
+          const [id, testType, clinician, patient, timestamp, dataHash, metadataHash, validated, completed, tokenAllocation, approvalCount] = testDetails as [bigint, string, string, string, bigint, string, string, boolean, boolean, bigint, bigint];
           
           // Count test types
           testTypes[testType] = (testTypes[testType] || 0) + 1;

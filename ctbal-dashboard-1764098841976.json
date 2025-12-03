@@ -1,0 +1,31 @@
+{
+  "network": "sepolia",
+  "chainId": 11155111,
+  "timestamp": "2025-11-25T19:27:21.976Z",
+  "blockNumber": "9705776",
+  "contracts": {
+    "CTBALToken": "0xcfab0ab01fd1a4a72601dd30da96fc13b0403246",
+    "CTBALAnalytics": "0x5b07f9bac1f72cbd5ef931f13d00bb87785eab5d"
+  },
+  "metrics": {
+    "totalTests": "34",
+    "completedTests": "0",
+    "validatedTests": "0",
+    "totalTokens": "8050",
+    "totalSupply": "1000000000000000000000000",
+    "deployerBalance": "999999999999999999991950",
+    "allocationPercentage": "0.0000"
+  },
+  "wyomingData": {
+    "imported": true,
+    "recordCount": 34,
+    "estimatedValue": "8050 CTBAL",
+    "coverage": "Wyoming statewide"
+  },
+  "performance": {
+    "deploymentGas": 3750405,
+    "estimatedImportGas": 5100000,
+    "totalGas": 8850405,
+    "estimatedCostUSD": "531.02"
+  }
+}

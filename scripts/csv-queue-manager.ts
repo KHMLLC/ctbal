@@ -32,20 +32,35 @@ interface FileTypeMapping {
 
 // Enhanced file type mappings for CTBAL mortality data
 const FILE_TYPE_MAPPINGS: FileTypeMapping[] = [
-  // Find-a-Grave mortality data patterns (highest priority)
+  // Daily consolidated mortality data (highest priority)
   { 
-    pattern: /us_recent_deaths.*\.csv$/i, 
+    pattern: /^mortality_data_\d{8}\.csv$/i, 
+    category: 'MORTALITY_DATA', 
+    subcategory: 'DAILY_CONSOLIDATED',
+    source: 'FIND_A_GRAVE',
+    priority: 1 
+  },
+  // Legacy individual state files (for existing data)
+  { 
+    pattern: /^[A-Z]{2}_\d{8}_\d{6}_us_recent_deaths\.csv$/i, 
+    category: 'MORTALITY_DATA', 
+    subcategory: 'STATE_DEATHS',
+    source: 'FIND_A_GRAVE',
+    priority: 2 
+  },
+  { 
+    pattern: /^us_recent_deaths\.csv$/i, 
     category: 'MORTALITY_DATA', 
     subcategory: 'RECENT_DEATHS',
     source: 'FIND_A_GRAVE',
-    priority: 1 
+    priority: 3 
   },
   { 
     pattern: /.*_deaths\.csv$/i, 
     category: 'MORTALITY_DATA', 
     subcategory: 'STATE_DEATHS',
     source: 'FIND_A_GRAVE',
-    priority: 2 
+    priority: 4 
   },
   { 
     pattern: /deaths_.*\.csv$/i, 

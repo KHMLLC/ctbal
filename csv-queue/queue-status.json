@@ -39,25 +39,25 @@
     }
   },
   {
-    "id": "1763522186330_sznvrx9bw",
+    "id": "1764013702020_oro8x5ezr",
     "filename": "us_recent_deaths.csv",
     "category": "MORTALITY_DATA",
     "subcategory": "RECENT_DEATHS",
     "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\us_recent_deaths.csv",
-    "timestamp": "2025-11-19T03:16:26.334Z",
+    "timestamp": "2025-11-24T19:48:22.025Z",
     "status": "COMPLETED",
     "metadata": {
-      "recordCount": 35,
+      "recordCount": 33,
       "source": "FIND_A_GRAVE"
     }
   },
   {
-    "id": "1763522476534_m5gfgm9yl",
+    "id": "1764014857120_gygitvpj9",
     "filename": "AK_20251118_161337_us_recent_deaths.csv",
     "category": "MORTALITY_DATA",
     "subcategory": "RECENT_DEATHS",
     "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\AK_20251118_161337_us_recent_deaths.csv",
-    "timestamp": "2025-11-19T03:21:16.539Z",
+    "timestamp": "2025-11-24T20:07:37.124Z",
     "status": "COMPLETED",
     "metadata": {
       "state": "Alaska",
@@ -67,12 +67,27 @@
     }
   },
   {
-    "id": "1763522484420_zjpl1yojp",
+    "id": "1764014857894_8zhbcyx9b",
+    "filename": "AK_20251124_134447_us_recent_deaths.csv",
+    "category": "MORTALITY_DATA",
+    "subcategory": "RECENT_DEATHS",
+    "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\AK_20251124_134447_us_recent_deaths.csv",
+    "timestamp": "2025-11-24T20:07:37.898Z",
+    "status": "COMPLETED",
+    "metadata": {
+      "state": "Alaska",
+      "dateRange": "2025-11-24",
+      "recordCount": 6,
+      "source": "FIND_A_GRAVE"
+    }
+  },
+  {
+    "id": "1764014869896_uc0bmq6h4",
     "filename": "DC_20251118_210307_us_recent_deaths.csv",
     "category": "MORTALITY_DATA",
     "subcategory": "RECENT_DEATHS",
     "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\DC_20251118_210307_us_recent_deaths.csv",
-    "timestamp": "2025-11-19T03:21:24.425Z",
+    "timestamp": "2025-11-24T20:07:49.900Z",
     "status": "COMPLETED",
     "metadata": {
       "state": "District of Columbia",
@@ -82,12 +97,27 @@
     }
   },
   {
-    "id": "1763522485651_tkmnxo7n5",
+    "id": "1764014870657_jze6s9sdg",
+    "filename": "DC_20251124_135221_us_recent_deaths.csv",
+    "category": "MORTALITY_DATA",
+    "subcategory": "RECENT_DEATHS",
+    "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\DC_20251124_135221_us_recent_deaths.csv",
+    "timestamp": "2025-11-24T20:07:50.661Z",
+    "status": "COMPLETED",
+    "metadata": {
+      "state": "District of Columbia",
+      "dateRange": "2025-11-24",
+      "recordCount": 3,
+      "source": "FIND_A_GRAVE"
+    }
+  },
+  {
+    "id": "1764014871465_vreiz4bki",
     "filename": "DE_20251118_210226_us_recent_deaths.csv",
     "category": "MORTALITY_DATA",
     "subcategory": "RECENT_DEATHS",
     "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\DE_20251118_210226_us_recent_deaths.csv",
-    "timestamp": "2025-11-19T03:21:25.657Z",
+    "timestamp": "2025-11-24T20:07:51.470Z",
     "status": "COMPLETED",
     "metadata": {
       "state": "Delaware",
@@ -97,12 +127,27 @@
     }
   },
   {
-    "id": "1763522488857_bv0dqhyyq",
+    "id": "1764014872293_gxpef1xd2",
+    "filename": "DE_20251124_135156_us_recent_deaths.csv",
+    "category": "MORTALITY_DATA",
+    "subcategory": "RECENT_DEATHS",
+    "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\DE_20251124_135156_us_recent_deaths.csv",
+    "timestamp": "2025-11-24T20:07:52.298Z",
+    "status": "COMPLETED",
+    "metadata": {
+      "state": "Delaware",
+      "dateRange": "2025-11-24",
+      "recordCount": 43,
+      "source": "FIND_A_GRAVE"
+    }
+  },
+  {
+    "id": "1764014876327_me2iqzgm8",
     "filename": "HI_20251118_212502_us_recent_deaths.csv",
     "category": "MORTALITY_DATA",
     "subcategory": "RECENT_DEATHS",
     "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\HI_20251118_212502_us_recent_deaths.csv",
-    "timestamp": "2025-11-19T03:21:28.861Z",
+    "timestamp": "2025-11-24T20:07:56.334Z",
     "status": "COMPLETED",
     "metadata": {
       "state": "Hawaii",
@@ -112,12 +157,27 @@
     }
   },
   {
-    "id": "1763522491002_zqf0u5d6b",
+    "id": "1764014877124_rkqo3rgr4",
+    "filename": "HI_20251124_135704_us_recent_deaths.csv",
+    "category": "MORTALITY_DATA",
+    "subcategory": "RECENT_DEATHS",
+    "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\HI_20251124_135704_us_recent_deaths.csv",
+    "timestamp": "2025-11-24T20:07:57.130Z",
+    "status": "COMPLETED",
+    "metadata": {
+      "state": "Hawaii",
+      "dateRange": "2025-11-24",
+      "recordCount": 64,
+      "source": "FIND_A_GRAVE"
+    }
+  },
+  {
+    "id": "1764014879525_e0zvwdinx",
     "filename": "ID_20251118_212531_us_recent_deaths.csv",
     "category": "MORTALITY_DATA",
     "subcategory": "RECENT_DEATHS",
     "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\ID_20251118_212531_us_recent_deaths.csv",
-    "timestamp": "2025-11-19T03:21:31.007Z",
+    "timestamp": "2025-11-24T20:07:59.530Z",
     "status": "COMPLETED",
     "metadata": {
       "state": "Idaho",
@@ -127,12 +187,27 @@
     }
   },
   {
-    "id": "1763522492077_e5bxne191",
+    "id": "1764014880316_xuvqc94zm",
+    "filename": "ID_20251124_135735_us_recent_deaths.csv",
+    "category": "MORTALITY_DATA",
+    "subcategory": "RECENT_DEATHS",
+    "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\ID_20251124_135735_us_recent_deaths.csv",
+    "timestamp": "2025-11-24T20:08:00.322Z",
+    "status": "COMPLETED",
+    "metadata": {
+      "state": "Idaho",
+      "dateRange": "2025-11-24",
+      "recordCount": 64,
+      "source": "FIND_A_GRAVE"
+    }
+  },
+  {
+    "id": "1764014881080_enm8698ik",
     "filename": "IL_20251118_212611_us_recent_deaths.csv",
     "category": "MORTALITY_DATA",
     "subcategory": "RECENT_DEATHS",
     "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\IL_20251118_212611_us_recent_deaths.csv",
-    "timestamp": "2025-11-19T03:21:32.082Z",
+    "timestamp": "2025-11-24T20:08:01.085Z",
     "status": "COMPLETED",
     "metadata": {
       "state": "Illinois",
@@ -142,12 +217,27 @@
     }
   },
   {
-    "id": "1763522498590_3m43tg1jz",
+    "id": "1764014885073_s7ovzed0o",
+    "filename": "KS_20251124_140252_us_recent_deaths.csv",
+    "category": "MORTALITY_DATA",
+    "subcategory": "RECENT_DEATHS",
+    "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\KS_20251124_140252_us_recent_deaths.csv",
+    "timestamp": "2025-11-24T20:08:05.077Z",
+    "status": "COMPLETED",
+    "metadata": {
+      "state": "Kansas",
+      "dateRange": "2025-11-24",
+      "recordCount": 20,
+      "source": "FIND_A_GRAVE"
+    }
+  },
+  {
+    "id": "1764014890487_p5tui3bre",
     "filename": "MD_20251118_214218_us_recent_deaths.csv",
     "category": "MORTALITY_DATA",
     "subcategory": "RECENT_DEATHS",
     "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\MD_20251118_214218_us_recent_deaths.csv",
-    "timestamp": "2025-11-19T03:21:38.595Z",
+    "timestamp": "2025-11-24T20:08:10.492Z",
     "status": "COMPLETED",
     "metadata": {
       "state": "Maryland",
@@ -157,12 +247,12 @@
     }
   },
   {
-    "id": "1763522505138_2hkhsfsnw",
+    "id": "1764014899836_qup5ya291",
     "filename": "MT_20251118_215110_us_recent_deaths.csv",
     "category": "MORTALITY_DATA",
     "subcategory": "RECENT_DEATHS",
     "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\MT_20251118_215110_us_recent_deaths.csv",
-    "timestamp": "2025-11-19T03:21:45.142Z",
+    "timestamp": "2025-11-24T20:08:19.841Z",
     "status": "COMPLETED",
     "metadata": {
       "state": "Montana",
@@ -172,12 +262,27 @@
     }
   },
   {
-    "id": "1763522507281_dqe9schui",
+    "id": "1764014900610_n2s7wt19d",
+    "filename": "MT_20251124_141849_us_recent_deaths.csv",
+    "category": "MORTALITY_DATA",
+    "subcategory": "RECENT_DEATHS",
+    "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\MT_20251124_141849_us_recent_deaths.csv",
+    "timestamp": "2025-11-24T20:08:20.615Z",
+    "status": "COMPLETED",
+    "metadata": {
+      "state": "Montana",
+      "dateRange": "2025-11-24",
+      "recordCount": 40,
+      "source": "FIND_A_GRAVE"
+    }
+  },
+  {
+    "id": "1764014902981_vfdqduet2",
     "filename": "ND_20251118_215953_us_recent_deaths.csv",
     "category": "MORTALITY_DATA",
     "subcategory": "RECENT_DEATHS",
     "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\ND_20251118_215953_us_recent_deaths.csv",
-    "timestamp": "2025-11-19T03:21:47.286Z",
+    "timestamp": "2025-11-24T20:08:22.986Z",
     "status": "COMPLETED",
     "metadata": {
       "state": "North Dakota",
@@ -187,12 +292,12 @@
     }
   },
   {
-    "id": "1763522509500_2xysjzvnt",
+    "id": "1764014906107_cspn4sj3q",
     "filename": "NH_20251118_215411_us_recent_deaths.csv",
     "category": "MORTALITY_DATA",
     "subcategory": "RECENT_DEATHS",
     "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\NH_20251118_215411_us_recent_deaths.csv",
-    "timestamp": "2025-11-19T03:21:49.506Z",
+    "timestamp": "2025-11-24T20:08:26.114Z",
     "status": "COMPLETED",
     "metadata": {
       "state": "New Hampshire",
@@ -202,12 +307,27 @@
     }
   },
   {
-    "id": "1763522512876_8w3h4p6cl",
+    "id": "1764014906890_4on7kzdj2",
+    "filename": "NH_20251124_142201_us_recent_deaths.csv",
+    "category": "MORTALITY_DATA",
+    "subcategory": "RECENT_DEATHS",
+    "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\NH_20251124_142201_us_recent_deaths.csv",
+    "timestamp": "2025-11-24T20:08:26.897Z",
+    "status": "COMPLETED",
+    "metadata": {
+      "state": "New Hampshire",
+      "dateRange": "2025-11-24",
+      "recordCount": 99,
+      "source": "FIND_A_GRAVE"
+    }
+  },
+  {
+    "id": "1764014910740_sk1sn0012",
     "filename": "NV_20251118_215336_us_recent_deaths.csv",
     "category": "MORTALITY_DATA",
     "subcategory": "RECENT_DEATHS",
     "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\NV_20251118_215336_us_recent_deaths.csv",
-    "timestamp": "2025-11-19T03:21:52.880Z",
+    "timestamp": "2025-11-24T20:08:30.745Z",
     "status": "COMPLETED",
     "metadata": {
       "state": "Nevada",
@@ -217,12 +337,27 @@
     }
   },
   {
-    "id": "1763522517221_walq4b8lh",
+    "id": "1764014911514_3ilpow4nv",
+    "filename": "NV_20251124_142104_us_recent_deaths.csv",
+    "category": "MORTALITY_DATA",
+    "subcategory": "RECENT_DEATHS",
+    "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\NV_20251124_142104_us_recent_deaths.csv",
+    "timestamp": "2025-11-24T20:08:31.519Z",
+    "status": "COMPLETED",
+    "metadata": {
+      "state": "Nevada",
+      "dateRange": "2025-11-24",
+      "recordCount": 54,
+      "source": "FIND_A_GRAVE"
+    }
+  },
+  {
+    "id": "1764014916998_um7b89xw1",
     "filename": "OR_20251118_220321_us_recent_deaths.csv",
     "category": "MORTALITY_DATA",
     "subcategory": "RECENT_DEATHS",
     "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\OR_20251118_220321_us_recent_deaths.csv",
-    "timestamp": "2025-11-19T03:21:57.228Z",
+    "timestamp": "2025-11-24T20:08:37.004Z",
     "status": "COMPLETED",
     "metadata": {
       "state": "Oregon",
@@ -232,12 +367,27 @@
     }
   },
   {
-    "id": "1763522519374_bst5f8pky",
+    "id": "1764014917794_le4inw4ud",
+    "filename": "OR_20251124_143245_us_recent_deaths.csv",
+    "category": "MORTALITY_DATA",
+    "subcategory": "RECENT_DEATHS",
+    "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\OR_20251124_143245_us_recent_deaths.csv",
+    "timestamp": "2025-11-24T20:08:37.799Z",
+    "status": "COMPLETED",
+    "metadata": {
+      "state": "Oregon",
+      "dateRange": "2025-11-24",
+      "recordCount": 89,
+      "source": "FIND_A_GRAVE"
+    }
+  },
+  {
+    "id": "1764014920120_uxo0jlf6x",
     "filename": "PR_20251118_220439_us_recent_deaths.csv",
     "category": "MORTALITY_DATA",
     "subcategory": "RECENT_DEATHS",
     "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\PR_20251118_220439_us_recent_deaths.csv",
-    "timestamp": "2025-11-19T03:21:59.379Z",
+    "timestamp": "2025-11-24T20:08:40.125Z",
     "status": "COMPLETED",
     "metadata": {
       "state": "PR",
@@ -247,12 +397,27 @@
     }
   },
   {
-    "id": "1763522520458_2bxtza4xb",
+    "id": "1764014920918_611cy9at1",
+    "filename": "PR_20251124_143458_us_recent_deaths.csv",
+    "category": "MORTALITY_DATA",
+    "subcategory": "RECENT_DEATHS",
+    "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\PR_20251124_143458_us_recent_deaths.csv",
+    "timestamp": "2025-11-24T20:08:40.922Z",
+    "status": "COMPLETED",
+    "metadata": {
+      "state": "PR",
+      "dateRange": "2025-11-24",
+      "recordCount": 17,
+      "source": "FIND_A_GRAVE"
+    }
+  },
+  {
+    "id": "1764014921700_hapgpuobp",
     "filename": "RI_20251118_220523_us_recent_deaths.csv",
     "category": "MORTALITY_DATA",
     "subcategory": "RECENT_DEATHS",
     "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\RI_20251118_220523_us_recent_deaths.csv",
-    "timestamp": "2025-11-19T03:22:00.464Z",
+    "timestamp": "2025-11-24T20:08:41.705Z",
     "status": "COMPLETED",
     "metadata": {
       "state": "Rhode Island",
@@ -262,12 +427,42 @@
     }
   },
   {
-    "id": "1763522528057_wjyejw13f",
+    "id": "1764014930268_llhgbvtiy",
+    "filename": "UT_20251124_144138_us_recent_deaths.csv",
+    "category": "MORTALITY_DATA",
+    "subcategory": "RECENT_DEATHS",
+    "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\UT_20251124_144138_us_recent_deaths.csv",
+    "timestamp": "2025-11-24T20:08:50.274Z",
+    "status": "COMPLETED",
+    "metadata": {
+      "state": "Utah",
+      "dateRange": "2025-11-24",
+      "recordCount": 80,
+      "source": "FIND_A_GRAVE"
+    }
+  },
+  {
+    "id": "1764014931871_l6g6maki6",
+    "filename": "VA_20251124_144432_us_recent_deaths.csv",
+    "category": "MORTALITY_DATA",
+    "subcategory": "RECENT_DEATHS",
+    "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\VA_20251124_144432_us_recent_deaths.csv",
+    "timestamp": "2025-11-24T20:08:51.877Z",
+    "status": "COMPLETED",
+    "metadata": {
+      "state": "Virginia",
+      "dateRange": "2025-11-24",
+      "recordCount": 60,
+      "source": "FIND_A_GRAVE"
+    }
+  },
+  {
+    "id": "1764014932640_qwtqxp9eo",
     "filename": "VI_20251118_221222_us_recent_deaths.csv",
     "category": "MORTALITY_DATA",
     "subcategory": "RECENT_DEATHS",
     "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\VI_20251118_221222_us_recent_deaths.csv",
-    "timestamp": "2025-11-19T03:22:08.061Z",
+    "timestamp": "2025-11-24T20:08:52.644Z",
     "status": "COMPLETED",
     "metadata": {
       "state": "VI",
@@ -277,12 +472,27 @@
     }
   },
   {
-    "id": "1763522529232_den0lnaqq",
+    "id": "1764014933428_y1d0hivqc",
+    "filename": "VI_20251124_144401_us_recent_deaths.csv",
+    "category": "MORTALITY_DATA",
+    "subcategory": "RECENT_DEATHS",
+    "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\VI_20251124_144401_us_recent_deaths.csv",
+    "timestamp": "2025-11-24T20:08:53.432Z",
+    "status": "COMPLETED",
+    "metadata": {
+      "state": "VI",
+      "dateRange": "2025-11-24",
+      "recordCount": 0,
+      "source": "FIND_A_GRAVE"
+    }
+  },
+  {
+    "id": "1764014934200_8djw4eihz",
     "filename": "VT_20251118_221106_us_recent_deaths.csv",
     "category": "MORTALITY_DATA",
     "subcategory": "RECENT_DEATHS",
     "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\VT_20251118_221106_us_recent_deaths.csv",
-    "timestamp": "2025-11-19T03:22:09.236Z",
+    "timestamp": "2025-11-24T20:08:54.206Z",
     "status": "COMPLETED",
     "metadata": {
       "state": "Vermont",
@@ -292,12 +502,27 @@
     }
   },
   {
-    "id": "1763522532487_rqnlnu06o",
+    "id": "1764014934982_b9eb9ez2e",
+    "filename": "VT_20251124_144222_us_recent_deaths.csv",
+    "category": "MORTALITY_DATA",
+    "subcategory": "RECENT_DEATHS",
+    "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\VT_20251124_144222_us_recent_deaths.csv",
+    "timestamp": "2025-11-24T20:08:54.986Z",
+    "status": "COMPLETED",
+    "metadata": {
+      "state": "Vermont",
+      "dateRange": "2025-11-24",
+      "recordCount": 43,
+      "source": "FIND_A_GRAVE"
+    }
+  },
+  {
+    "id": "1764014939018_vecp3kjxh",
     "filename": "WV_20251118_221516_us_recent_deaths.csv",
     "category": "MORTALITY_DATA",
     "subcategory": "RECENT_DEATHS",
     "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\WV_20251118_221516_us_recent_deaths.csv",
-    "timestamp": "2025-11-19T03:22:12.492Z",
+    "timestamp": "2025-11-24T20:08:59.024Z",
     "status": "COMPLETED",
     "metadata": {
       "state": "West Virginia",
@@ -307,17 +532,32 @@
     }
   },
   {
-    "id": "1763522533575_6u233suti",
+    "id": "1764014940583_emc0rvt2t",
     "filename": "WY_20251118_221626_us_recent_deaths.csv",
     "category": "MORTALITY_DATA",
     "subcategory": "RECENT_DEATHS",
     "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\WY_20251118_221626_us_recent_deaths.csv",
-    "timestamp": "2025-11-19T03:22:13.580Z",
+    "timestamp": "2025-11-24T20:09:00.587Z",
     "status": "COMPLETED",
     "metadata": {
       "state": "Wyoming",
       "dateRange": "2025-11-18",
       "recordCount": 35,
+      "source": "FIND_A_GRAVE"
+    }
+  },
+  {
+    "id": "1764014941380_rm632r264",
+    "filename": "WY_20251124_144822_us_recent_deaths.csv",
+    "category": "MORTALITY_DATA",
+    "subcategory": "RECENT_DEATHS",
+    "filePath": "C:\\Users\\djman\\OneDrive\\Documents\\GitHub\\scrape-a-grave\\processed_csvs\\WY_20251124_144822_us_recent_deaths.csv",
+    "timestamp": "2025-11-24T20:09:01.385Z",
+    "status": "COMPLETED",
+    "metadata": {
+      "state": "Wyoming",
+      "dateRange": "2025-11-24",
+      "recordCount": 33,
       "source": "FIND_A_GRAVE"
     }
   }

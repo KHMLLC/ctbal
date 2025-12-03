@@ -1,0 +1,20 @@
+[
+  {
+    "date": "11/24/2025",
+    "weight": 182,
+    "glucose": 98,
+    "insulin": 0,
+    "bloodPressureSystolic": 120,
+    "bloodPressureDiastolic": 80,
+    "heartRate": 72,
+    "notes": "Morning reading after breakfast, feeling energetic"
+  },
+  {
+    "date": "11/23/2025", 
+    "weight": 183,
+    "glucose": 105,
+    "insulin": 0,
+    "heartRate": 75,
+    "notes": "Weekend relaxation, slightly elevated glucose"
+  }
+]

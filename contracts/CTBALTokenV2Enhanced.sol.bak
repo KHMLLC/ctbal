@@ -1,0 +1,183 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/access/AccessControl.sol";
+import "@openzeppelin/contracts/utils/Pausable.sol";
+import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
+
+/**
+ * @title CTBAL Token V2 - Enhanced Clinical Testing with Direct Geographic Access
+ * @dev Simplified version with direct state/demographic access
+ */
+contract CTBALTokenV2Enhanced is ERC20, AccessControl, Pausable, ReentrancyGuard {
+    
+    bytes32 public constant CLINICIAN_ROLE = keccak256("CLINICIAN_ROLE");
+    bytes32 public constant VALIDATOR_ROLE = keccak256("VALIDATOR_ROLE");
+    
+    struct ClinicalTest {
+        uint256 testId;
+        string testType;
+        address clinician;
+        address patient;
+        uint256 timestamp;
+        string state;
+        string county;
+        string city;
+        uint8 estimatedAge;
+        string ageCategory;
+        string patientCategory;
+        bool validated;
+        bool completed;
+        uint256 associatedTokens;
+        uint256 approvalCount;
+    }
+    
+    // Core mappings
+    mapping(uint256 => ClinicalTest) public clinicalTests;
+    
+    // Enhanced indexing for direct queries
+    mapping(string => uint256[]) public testsByState;
+    mapping(string => uint256[]) public testsByCounty;
+    mapping(string => uint256[]) public testsByAgeCategory;
+    mapping(string => uint256[]) public testsByTestType;
+    
+    // Statistics
+    mapping(string => uint256) public stateTestCounts;
+    mapping(string => uint256) public testTypeCounts;
+    
+    // Traditional mappings
+    mapping(address => uint256[]) public patientTests;
+    mapping(address => uint256[]) public clinicianTests;
+    
+    uint256 private _testIdCounter;
+    
+    event ClinicalTestCreated(
+        uint256 indexed testId,
+        address indexed clinician,
+        address indexed patient,
+        string testType,
+        string state
+    );
+    
+    constructor() ERC20("Clinical Test Blockchain Analytics V2", "CTBAL") {
+        _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
+        _grantRole(CLINICIAN_ROLE, msg.sender);
+        _testIdCounter = 1;
+        
+        // Mint initial supply for testing
+        _mint(msg.sender, 1000000 * 10**decimals());
+    }
+    
+    function createClinicalTest(
+        string memory testType,
+        address patient,
+        string memory state,
+        string memory county,
+        string memory city,
+        uint8 estimatedAge,
+        string memory ageCategory,
+        string memory patientCategory,
+        uint256 tokenAllocation
+    ) external onlyRole(CLINICIAN_ROLE) returns (uint256) {
+        
+        require(bytes(testType).length > 0, "Test type required");
+        require(bytes(state).length > 0, "State required");
+        require(patient != address(0), "Patient required");
+        
+        uint256 testId = _testIdCounter;
+        _testIdCounter++;
+        
+        // Create test record
+        ClinicalTest storage newTest = clinicalTests[testId];
+        newTest.testId = testId;
+        newTest.testType = testType;
+        newTest.clinician = msg.sender;
+        newTest.patient = patient;
+        newTest.timestamp = block.timestamp;
+        newTest.state = state;
+        newTest.county = county;
+        newTest.city = city;
+        newTest.estimatedAge = estimatedAge;
+        newTest.ageCategory = ageCategory;
+        newTest.patientCategory = patientCategory;
+        newTest.associatedTokens = tokenAllocation;
+        
+        // Update indexes
+        testsByState[state].push(testId);
+        testsByCounty[county].push(testId);
+        testsByAgeCategory[ageCategory].push(testId);
+        testsByTestType[testType].push(testId);
+        
+        patientTests[patient].push(testId);
+        clinicianTests[msg.sender].push(testId);
+        
+        // Update statistics
+        stateTestCounts[state]++;
+        testTypeCounts[testType]++;
+        
+        emit ClinicalTestCreated(testId, msg.sender, patient, testType, state);
+        
+        return testId;
+    }
+    
+    function getClinicalTest(uint256 testId) external view returns (
+        uint256 id,
+        string memory testType,
+        address clinician,
+        address patient,
+        uint256 timestamp,
+        string memory state,
+        string memory county,
+        string memory city,
+        uint8 estimatedAge,
+        string memory ageCategory,
+        string memory patientCategory,
+        bool validated,
+        bool completed,
+        uint256 associatedTokens,
+        uint256 approvalCount
+    ) {
+        require(testId > 0 && testId < _testIdCounter, "Invalid test ID");
+        
+        ClinicalTest storage test = clinicalTests[testId];
+        return (
+            test.testId,
+            test.testType,
+            test.clinician,
+            test.patient,
+            test.timestamp,
+            test.state,
+            test.county,
+            test.city,
+            test.estimatedAge,
+            test.ageCategory,
+            test.patientCategory,
+            test.validated,
+            test.completed,
+            test.associatedTokens,
+            test.approvalCount
+        );
+    }
+    
+    // Direct query functions
+    function getTestsByState(string memory state) external view returns (uint256[] memory) {
+        return testsByState[state];
+    }
+    
+    function getTestsByCounty(string memory county) external view returns (uint256[] memory) {
+        return testsByCounty[county];
+    }
+    
+    function getTestsByAgeCategory(string memory ageCategory) external view returns (uint256[] memory) {
+        return testsByAgeCategory[ageCategory];
+    }
+    
+    function getStateStats(string memory state) external view returns (uint256 totalTests, uint256[] memory testIds) {
+        return (stateTestCounts[state], testsByState[state]);
+    }
+    
+    function getTotalTestCount() external view returns (uint256) {
+        return _testIdCounter - 1;
+    }
+}

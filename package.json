@@ -31,6 +31,11 @@
     "queue:status": "npx tsx scripts/csv-queue-manager.ts status",
     "queue:clear": "npx tsx scripts/csv-queue-manager.ts clear",
     "queue:remove": "npx tsx scripts/csv-queue-manager.ts remove",
+    "auto-queue": "npx tsx scripts/auto-queue-manager.ts",
+    "auto-queue:detect": "npx tsx scripts/auto-queue-manager.ts detect",
+    "auto-queue:full": "npx tsx scripts/auto-queue-manager.ts full",
+    "auto-queue:status": "npx tsx scripts/auto-queue-manager.ts status",
+    "daily:process": "npx tsx scripts/auto-queue-manager.ts full",
     "scrape:transfer": "python scripts/ctbal-scrape-integration.py transfer",
     "scrape:full-pipeline": "python scripts/ctbal-scrape-integration.py full",
     "import:csv:khmweb01": "hardhat run scripts/batch-csv-import.ts --network khmweb01",
@@ -52,7 +57,25 @@
     "system:health": "npm run queue:status && npm run dashboard:sepolia",
     "backup:create": "npx tsx scripts/backup-system-state.ts",
     "git:prepare": "git add . && git status",
-    "release:prepare": "npm run production:ready && npm run docs:generate && npm run git:prepare"
+    "release:prepare": "npm run production:ready && npm run docs:generate && npm run git:prepare",
+    "data:read": "npx tsx scripts/read-submitted-data.ts",
+    "health:submit": "npx tsx scripts/submit-daily-health.ts",
+    "health:daily": "npm run health:submit",
+    "data:analytics": "npm run data:read && npm run dashboard:sepolia",
+    "query:all": "npx tsx scripts/query-blockchain-contents.ts",
+    "query:state": "npx tsx scripts/query-by-state.ts",
+    "query:wyoming": "npx tsx scripts/query-by-state.ts wyoming",
+    "query:delaware": "npx tsx scripts/query-by-state.ts delaware",
+    "query:california": "npx tsx scripts/query-by-state.ts california",
+    "query:texas": "npx tsx scripts/query-by-state.ts texas",
+    "import:nationwide": "npx tsx scripts/import-nationwide-csv.ts",
+    "analyze:migration": "npx tsx scripts/analyze-migration-strategy.ts",
+    "process:nationwide": "npx tsx scripts/process-nationwide-csv.ts",
+    "deploy:batch": "npx tsx scripts/deploy-nationwide-batch.ts",
+    "deploy:resume": "npx tsx scripts/deploy-nationwide-batch.ts --resume",
+    "deploy:batch:small": "npx tsx scripts/deploy-nationwide-batch.ts --batch=3 --start=0",
+    "deploy:nationwide": "npx tsx scripts/process-nationwide-csv.ts mortality_data_nationwide.csv 100 --deploy",
+    "status": "npx tsx scripts/system-status.ts"
   },
   "keywords": [],
   "author": "",
@@ -62,7 +85,7 @@
     "@nomicfoundation/hardhat-ethers": "^4.0.3",
     "@nomicfoundation/hardhat-ignition": "^3.0.5",
     "@nomicfoundation/hardhat-network-helpers": "^3.0.2",
-    "@nomicfoundation/hardhat-toolbox-viem": "^5.0.1",
+    "@nomicfoundation/hardhat-viem": "^3.0.1",
     "@types/chai": "^5.2.3",
     "@types/mocha": "^10.0.10",
     "@types/node": "^22.19.1",
@@ -73,12 +96,12 @@
     "hardhat": "^3.0.14",
     "mocha": "^11.7.5",
     "typescript": "~5.8.0",
-    "viem": "^2.39.0"
+    "viem": "^2.40.4"
   },
   "dependencies": {
+    "@nomicfoundation/hardhat-ignition-viem": "^3.0.6",
     "@openzeppelin/contracts": "^5.4.0",
     "@openzeppelin/contracts-upgradeable": "^5.4.0",
-    "csv-parser": "^3.2.0",
-    "web3": "^4.16.0"
+    "csv-parser": "^3.2.0"
   }
 }

@@ -1,0 +1,22 @@
+{
+  "network": "sepolia",
+  "chainId": 11155111,
+  "timestamp": "2025-12-03T17:57:03.342Z",
+  "deployer": "0xdB8e11f53A9cd422c9854f438c9CfAB167c3019c",
+  "contracts": {
+    "CTBALToken": "0x386b7e934f1cfd8169bf8b9d5249ba1ed7e1926f",
+    "CTBALAnalytics": "0x4ba62466265d6d3853cff74b910e5b7ab13aaea1"
+  },
+  "csvImport": {
+    "totalRecordsInCsv": 10794,
+    "processedRecords": 100,
+    "successfulImports": 100,
+    "failedImports": 0,
+    "successRate": "100.0%",
+    "totalTokensAllocated": "36250"
+  },
+  "etherscanUrls": {
+    "CTBALToken": "https://sepolia.etherscan.io/address/0x386b7e934f1cfd8169bf8b9d5249ba1ed7e1926f",
+    "CTBALAnalytics": "https://sepolia.etherscan.io/address/0x4ba62466265d6d3853cff74b910e5b7ab13aaea1"
+  }
+}
