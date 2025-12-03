@@ -57,6 +57,9 @@ jobs:
       run: npm ci
       
     - name: Validate secrets
+      env:
+        SEPOLIA_URL: ${{ secrets.SEPOLIA_URL }}
+        PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
       run: |
         if [ -z "$SEPOLIA_URL" ]; then
           echo "❌ SEPOLIA_URL secret is not set"
@@ -69,9 +72,6 @@ jobs:
           exit 1
         fi
         echo "✅ All deployment secrets are configured"
-      env:
-        SEPOLIA_URL: ${{ secrets.SEPOLIA_URL }}
-        PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
         
     - name: Deploy to Sepolia
       env:
