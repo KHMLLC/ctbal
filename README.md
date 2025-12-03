@@ -64,11 +64,13 @@ The CTBAL platform integrates multiple components for comprehensive healthcare b
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Node.js 18+
 - npm or yarn
 - Git
 
 ### Installation
+
 ```bash
 git clone <repository-url>
 cd ctbal
@@ -76,6 +78,7 @@ npm install
 ```
 
 ### Available Commands
+
 ```bash
 npm run compile      # Compile smart contracts
 npm run test         # Run analytics validation
@@ -91,12 +94,14 @@ npm run clean        # Clear build artifacts
 ### Multi-Hospital Clinical Research Study
 
 **Participants:**
+
 - Hospital A: Cardiology Department (Dr. Smith)
 - Hospital B: Neurology Department (Dr. Jones)
 - 6 Patients participating in clinical trials
 - Data Analyst monitoring compliance & performance
 
 **Workflow:**
+
 1. **Setup**: Grant roles to clinicians, patients, analysts
 2. **Funding**: Mint CTBAL tokens for patient incentives
 3. **Tests**: Clinicians create clinical tests with token rewards
@@ -106,6 +111,7 @@ npm run clean        # Clear build artifacts
 7. **Reporting**: Performance reports generated for stakeholders
 
 **Sample Clinical Tests:**
+
 - Cardiac Stress Test → 200 CTBAL reward
 - Brain MRI with Contrast → 400 CTBAL reward
 - Cognitive Assessment → 250 CTBAL reward
@@ -114,18 +120,21 @@ npm run clean        # Clear build artifacts
 ## 📊 Analytics Features
 
 ### Real-time Metrics
+
 - Total tests created/validated/completed
 - Token allocation and distribution tracking
 - Validation rate (% of tests validated)
 - Completion rate (% of tests finished)
 
 ### Performance Tracking
+
 - Clinician productivity metrics
 - Patient participation levels
 - Test type analysis and trends
 - Time series data for forecasting
 
 ### Compliance & Auditing
+
 - Immutable audit trails
 - Role-based access controls
 - Automated reporting capabilities
@@ -142,38 +151,45 @@ npm run clean        # Clear build artifacts
 ## 💼 Business Value
 
 ### Cost Reduction
+
 - Automated patient payments (no manual processing)
 - Reduced administrative overhead
 - Streamlined compliance reporting
 
 ### Efficiency Gains
+
 - Real-time trial monitoring
 - Instant performance feedback
 - Automated workflow management
 
 ### Risk Mitigation
+
 - Immutable audit trails
 - Transparent payment system
 - Compliance automation
 
 ### Performance Optimization
+
 - Data-driven decision making
 - Bottleneck identification
 - Resource allocation insights
 
 ## 🛠️ Technical Specifications
 
-### Smart Contracts
+### Contract Details
+
 - **Solidity Version**: 0.8.20
 - **OpenZeppelin**: 5.4.0 (Security & Standards)
 - **Hardhat**: 3.0.14 (Development Framework)
 - **Viem**: 2.39.0 (Ethereum Interaction)
 
 ### Contract Functions
+
 - **CTBALToken**: 40 functions
 - **CTBALAnalytics**: 23 functions
 
 ### Key Contract Features
+
 - ERC20 token standard compliance
 - Role-based access control
 - Clinical test lifecycle management
@@ -184,6 +200,7 @@ npm run clean        # Clear build artifacts
 ## 📚 Contract Reference
 
 ### CTBALToken Main Functions
+
 ```solidity
 // Test Management
 function createClinicalTest(string name, string description, uint256 reward, address patient, uint256 testType)
@@ -200,6 +217,7 @@ function transfer(address to, uint256 amount)
 ```
 
 ### CTBALAnalytics Main Functions
+
 ```solidity
 // Analytics Updates
 function updateMetrics()
@@ -217,6 +235,7 @@ function getTimeSeriesData() returns (TimeSeriesData[] memory)
 ## 🌐 Deployment
 
 ### Local Testing
+
 ```bash
 # Compile contracts
 npm run compile
@@ -229,6 +248,7 @@ npm run demo
 ```
 
 ### Production Deployment
+
 1. Configure network in `hardhat.config.ts`
 2. Set up environment variables
 3. Deploy using deployment script
@@ -236,6 +256,7 @@ npm run demo
 5. Set up monitoring and alerting
 
 ### Network Configuration Example
+
 ```typescript
 // hardhat.config.ts
 const config: HardhatUserConfig = {
@@ -256,6 +277,7 @@ const config: HardhatUserConfig = {
 ## 📈 Monitoring & Analytics
 
 ### Key Performance Indicators (KPIs)
+
 - Test Creation Rate
 - Validation Efficiency
 - Completion Rate
@@ -264,6 +286,7 @@ const config: HardhatUserConfig = {
 - Patient Engagement
 
 ### Real-time Dashboards
+
 - Live test statistics
 - Performance metrics
 - Compliance status

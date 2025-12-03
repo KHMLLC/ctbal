@@ -1,0 +1,29 @@
+# CTBAL Healthcare Blockchain Code Owners
+# These users/teams will be automatically requested for review when PRs are opened
+
+# Global ownership - all files require review
+* @KHMLLC
+
+# Smart contracts require extra scrutiny
+/contracts/ @KHMLLC
+/contracts/*.sol @KHMLLC
+
+# CI/CD pipeline changes are critical
+/.github/ @KHMLLC
+/.github/workflows/ @KHMLLC
+
+# Deployment scripts need careful review
+/scripts/deploy* @KHMLLC
+/scripts/*deploy* @KHMLLC
+
+# Test files to ensure quality
+/test/ @KHMLLC
+
+# Configuration files
+hardhat.config.ts @KHMLLC
+package.json @KHMLLC
+tsconfig.json @KHMLLC
+
+# Documentation
+README.md @KHMLLC
+*.md @KHMLLC
