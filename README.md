@@ -1,2 +1,3 @@
 # ctbal
-Clinical Trial Blockchain Audit Ledger
+
+CTBAL - Clinical Test Blockchain Analytics for Healthcare Data Management
