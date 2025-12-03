@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "hardhat run scripts/test-analytics.ts",
+    "test": "npx tsx test/CTBALToken.test.ts && npx tsx test/CTBALAnalytics.test.ts",
     "test:compile": "hardhat compile --force",
     "compile": "hardhat compile",
     "deploy": "npx tsx scripts/deploy-viem-direct.ts",
