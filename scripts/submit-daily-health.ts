@@ -87,7 +87,7 @@ async function saveHealthDataLocally(data: HealthData): Promise<string> {
     fs.mkdirSync(dataDir, { recursive: true });
   }
   
-  const filename = `health_data_${data.date.replace(/\\//g, '-')}.json`;
+  const filename = `health_data_${data.date.replace(/\//g, '-')}.json`;
   const filepath = `${dataDir}/${filename}`;
   
   // Load existing data or create new file

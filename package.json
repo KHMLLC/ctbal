@@ -24,6 +24,8 @@
     "validate:setup": "hardhat run scripts/validate-setup.ts --network sepolia",
     "check:deployment": "hardhat run scripts/deployment-check.ts",
     "import:csv": "npx tsx scripts/import-wyoming-sepolia.ts",
+    "import:mortality": "npx tsx scripts/mortality-data-import.ts",
+    "import:mortality:today": "npx tsx scripts/mortality-data-import.ts",
     "queue:add": "npx tsx scripts/csv-queue-manager.ts add",
     "queue:list": "npx tsx scripts/csv-queue-manager.ts list",
     "queue:process": "npx tsx scripts/csv-queue-manager.ts process",
@@ -61,6 +63,9 @@
     "data:read": "npx tsx scripts/read-submitted-data.ts",
     "health:submit": "npx tsx scripts/submit-daily-health.ts",
     "health:daily": "npm run health:submit",
+    "api:server": "npx tsx scripts/health-api-server.ts",
+    "api:start": "npm run api:server",
+    "mobile:demo": "npx tsx scripts/mobile-integration-demo.ts",
     "data:analytics": "npm run data:read && npm run dashboard:sepolia",
     "query:all": "npx tsx scripts/query-blockchain-contents.ts",
     "query:state": "npx tsx scripts/query-by-state.ts",
@@ -102,6 +107,10 @@
     "@nomicfoundation/hardhat-ignition-viem": "^3.0.6",
     "@openzeppelin/contracts": "^5.4.0",
     "@openzeppelin/contracts-upgradeable": "^5.4.0",
-    "csv-parser": "^3.2.0"
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "cors": "^2.8.5",
+    "csv-parser": "^3.2.0",
+    "express": "^5.2.1"
   }
 }
