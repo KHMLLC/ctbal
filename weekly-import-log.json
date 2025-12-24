@@ -1,0 +1,18 @@
+[
+  {
+    "timestamp": "2025-12-24T01:31:03.653Z",
+    "fileName": "mortality_data_20251222.csv",
+    "fileDate": "20251222",
+    "recordCount": 57,
+    "delawareCount": 57,
+    "success": true
+  },
+  {
+    "timestamp": "2025-12-31T21:28:04.434Z",
+    "fileName": "mortality_data_20251229.csv",
+    "fileDate": "20251229",
+    "recordCount": 38,
+    "delawareCount": 38,
+    "success": true
+  }
+]
