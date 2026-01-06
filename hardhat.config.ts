@@ -3,6 +3,7 @@ import "@nomicfoundation/hardhat-viem";
 import "@nomicfoundation/hardhat-ethers";
 import "@nomicfoundation/hardhat-ignition";
 import "@nomicfoundation/hardhat-ignition-viem";
+import "@nomicfoundation/hardhat-mocha";
 import "dotenv/config";
 
 const config: HardhatUserConfig = {

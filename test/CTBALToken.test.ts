@@ -1,10 +1,10 @@
 import { expect } from "chai";
-import { viem } from "hardhat";
+import hre from "hardhat";
 import { parseEther, keccak256, toHex } from "viem";
 
 describe("CTBALToken", function () {
   it("Should deploy and have correct name and symbol", async function () {
-    const ctbalToken = await viem.deployContract("CTBALToken", [
+    const ctbalToken = await hre.viem.deployContract("CTBALToken", [
       "Clinical Testing Blockchain Analytical Ledger",
       "CTBAL", 
       1000000n
@@ -15,9 +15,9 @@ describe("CTBALToken", function () {
   });
 
   it("Should assign total supply to deployer", async function () {
-    const [owner] = await viem.getWalletClients();
+    const [owner] = await hre.viem.getWalletClients();
     
-    const ctbalToken = await viem.deployContract("CTBALToken", [
+    const ctbalToken = await hre.viem.deployContract("CTBALToken", [
       "Clinical Testing Blockchain Analytical Ledger",
       "CTBAL",
       1000000n
@@ -30,9 +30,9 @@ describe("CTBALToken", function () {
   });
 
   it("Should grant admin role to deployer", async function () {
-    const [owner] = await viem.getWalletClients();
+    const [owner] = await hre.viem.getWalletClients();
     
-    const ctbalToken = await viem.deployContract("CTBALToken", [
+    const ctbalToken = await hre.viem.deployContract("CTBALToken", [
       "Clinical Testing Blockchain Analytical Ledger",
       "CTBAL",
       1000000n
@@ -45,9 +45,9 @@ describe("CTBALToken", function () {
   });
 
   it("Should allow creating clinical tests by clinicians", async function () {
-    const [owner, clinician, patient] = await viem.getWalletClients();
+    const [owner, clinician, patient] = await hre.viem.getWalletClients();
     
-    const ctbalToken = await viem.deployContract("CTBALToken", [
+    const ctbalToken = await hre.viem.deployContract("CTBALToken", [
       "Clinical Testing Blockchain Analytical Ledger", 
       "CTBAL",
       1000000n
@@ -61,7 +61,7 @@ describe("CTBALToken", function () {
     await ctbalToken.write.transfer([clinician.account.address, parseEther("1000")]);
 
     // Create clinical test
-    const clinicianContract = await viem.getContractAt("CTBALToken", ctbalToken.address, {
+    const clinicianContract = await hre.viem.getContractAt("CTBALToken", ctbalToken.address, {
       client: { wallet: clinician }
     });
 
@@ -81,9 +81,9 @@ describe("CTBALToken", function () {
   });
 
   it("Should allow validators to validate tests", async function () {
-    const [owner, clinician, patient, validator] = await viem.getWalletClients();
+    const [owner, clinician, patient, validator] = await hre.viem.getWalletClients();
     
-    const ctbalToken = await viem.deployContract("CTBALToken", [
+    const ctbalToken = await hre.viem.deployContract("CTBALToken", [
       "Clinical Testing Blockchain Analytical Ledger",
       "CTBAL",
       1000000n
@@ -98,7 +98,7 @@ describe("CTBALToken", function () {
     // Transfer tokens and create test
     await ctbalToken.write.transfer([clinician.account.address, parseEther("1000")]);
     
-    const clinicianContract = await viem.getContractAt("CTBALToken", ctbalToken.address, {
+    const clinicianContract = await hre.viem.getContractAt("CTBALToken", ctbalToken.address, {
       client: { wallet: clinician }
     });
 
@@ -111,7 +111,7 @@ describe("CTBALToken", function () {
     ]);
 
     // Validate test
-    const validatorContract = await viem.getContractAt("CTBALToken", ctbalToken.address, {
+    const validatorContract = await hre.viem.getContractAt("CTBALToken", ctbalToken.address, {
       client: { wallet: validator }
     });
     
@@ -123,9 +123,9 @@ describe("CTBALToken", function () {
   });
 
   it("Should complete tests and transfer tokens to patient", async function () {
-    const [owner, clinician, patient, validator] = await viem.getWalletClients();
+    const [owner, clinician, patient, validator] = await hre.viem.getWalletClients();
     
-    const ctbalToken = await viem.deployContract("CTBALToken", [
+    const ctbalToken = await hre.viem.deployContract("CTBALToken", [
       "Clinical Testing Blockchain Analytical Ledger",
       "CTBAL", 
       1000000n
@@ -139,10 +139,10 @@ describe("CTBALToken", function () {
     await ctbalToken.write.transfer([clinician.account.address, parseEther("1000")]);
 
     // Create and validate test
-    const clinicianContract = await viem.getContractAt("CTBALToken", ctbalToken.address, {
+    const clinicianContract = await hre.viem.getContractAt("CTBALToken", ctbalToken.address, {
       client: { wallet: clinician }
     });
-    const validatorContract = await viem.getContractAt("CTBALToken", ctbalToken.address, {
+    const validatorContract = await hre.viem.getContractAt("CTBALToken", ctbalToken.address, {
       client: { wallet: validator }
     });
 
