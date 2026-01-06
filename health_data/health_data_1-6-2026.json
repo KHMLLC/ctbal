@@ -1,0 +1,12 @@
+[
+  {
+    "date": "1/6/2026",
+    "weight": 185,
+    "glucose": 140,
+    "insulin": 0,
+    "bloodPressureSystolic": 125,
+    "bloodPressureDiastolic": 70,
+    "heartRate": 67,
+    "notes": "Good"
+  }
+]
