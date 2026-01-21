@@ -22,5 +22,21 @@
     "recordCount": 52,
     "delawareCount": 52,
     "success": true
+  },
+  {
+    "timestamp": "2026-01-13T21:11:45.380Z",
+    "fileName": "mortality_data_20260112.csv",
+    "fileDate": "20260112",
+    "recordCount": 96,
+    "delawareCount": 96,
+    "success": true
+  },
+  {
+    "timestamp": "2026-01-21T16:55:13.087Z",
+    "fileName": "mortality_data_20260119.csv",
+    "fileDate": "20260119",
+    "recordCount": 46,
+    "delawareCount": 46,
+    "success": true
   }
 ]
