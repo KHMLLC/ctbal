@@ -95,7 +95,7 @@
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-ethers": "^4.0.3",
-    "@nomicfoundation/hardhat-ignition": "^3.0.5",
+    "@nomicfoundation/hardhat-ignition": "^3.0.7",
     "@nomicfoundation/hardhat-mocha": "^3.0.8",
     "@nomicfoundation/hardhat-network-helpers": "^3.0.2",
     "@nomicfoundation/hardhat-viem": "^3.0.1",
@@ -107,12 +107,12 @@
     "ethers": "^6.15.0",
     "forge-std": "github:foundry-rs/forge-std#v1.9.4",
     "hardhat": "^3.0.14",
-    "mocha": "^11.7.5",
+    "mocha": "^11.3.0",
     "typescript": "~5.8.0",
     "viem": "^2.40.4"
   },
   "dependencies": {
-    "@nomicfoundation/hardhat-ignition-viem": "^3.0.6",
+    "@nomicfoundation/hardhat-ignition-viem": "^3.0.7",
     "@openzeppelin/contracts": "^5.4.0",
     "@openzeppelin/contracts-upgradeable": "^5.4.0",
     "@types/cors": "^2.8.19",
