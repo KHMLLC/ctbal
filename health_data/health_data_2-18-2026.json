@@ -1,0 +1,22 @@
+[
+  {
+    "date": "2/18/2026",
+    "weight": 185,
+    "glucose": 154,
+    "insulin": 60,
+    "bloodPressureSystolic": 138,
+    "bloodPressureDiastolic": 72,
+    "heartRate": 74,
+    "notes": "Good"
+  },
+  {
+    "date": "2/18/2026",
+    "weight": 185,
+    "glucose": 154,
+    "insulin": 60,
+    "bloodPressureSystolic": 138,
+    "bloodPressureDiastolic": 72,
+    "heartRate": 74,
+    "notes": "Good"
+  }
+]
