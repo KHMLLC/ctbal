@@ -110,5 +110,29 @@
     "recordCount": 65,
     "delawareCount": 65,
     "success": true
+  },
+  {
+    "timestamp": "2026-03-28T16:55:00.604Z",
+    "fileName": "mortality_data_20260324.csv",
+    "fileDate": "20260324",
+    "recordCount": 41,
+    "delawareCount": 41,
+    "success": true
+  },
+  {
+    "timestamp": "2026-03-28T16:59:49.747Z",
+    "fileName": "mortality_data_20260324.csv",
+    "fileDate": "20260324",
+    "recordCount": 41,
+    "delawareCount": 41,
+    "success": true
+  },
+  {
+    "timestamp": "2026-04-09T00:58:20.172Z",
+    "fileName": "mortality_data_20260406.csv",
+    "fileDate": "20260406",
+    "recordCount": 32,
+    "delawareCount": 32,
+    "success": true
   }
 ]
