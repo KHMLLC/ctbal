@@ -8,12 +8,32 @@ import * as dotenv from 'dotenv';
 import CTBALTokenArtifact from '../artifacts/contracts/CTBALToken.sol/CTBALToken.json' assert { type: "json" };
 import CTBALAnalyticsArtifact from '../artifacts/contracts/CTBALAnalytics.sol/CTBALAnalytics.json' assert { type: "json" };
 
-dotenv.config();
+// Only load .env file if we're not in CI/CD environment (GitHub Actions)
+if (!process.env.CI && !process.env.GITHUB_ACTIONS) {
+  dotenv.config();
+}
 
 async function main() {
   console.log("🚀 DEPLOYING CTBAL TO SEPOLIA TESTNET (Direct Viem)");
   console.log("===================================================\n");
 
+  // Validate environment variables
+  if (!process.env.PRIVATE_KEY) {
+    console.error("❌ PRIVATE_KEY not found in environment variables");
+    console.error("In GitHub Actions: Ensure PRIVATE_KEY is set in repository secrets");
+    console.error("Locally: Ensure PRIVATE_KEY is set in .env file");
+    process.exit(1);
+  }
+
+  if (!process.env.SEPOLIA_URL) {
+    console.error("❌ SEPOLIA_URL not found in environment variables");
+    console.error("In GitHub Actions: Ensure SEPOLIA_URL is set in repository secrets");
+    console.error("Locally: Ensure SEPOLIA_URL is set in .env file");
+    process.exit(1);
+  }
+
+  console.log("✅ Environment variables validated");
+  
   // Setup wallet and clients
   const account = privateKeyToAccount(process.env.PRIVATE_KEY as `0x${string}`);
   
