@@ -3,6 +3,7 @@
   "id": "solc-0_8_20-b9d702a73548227ae445a41b39d43b7301d2b277",
   "solcVersion": "0.8.20",
   "solcLongVersion": "0.8.20+commit.a1b79de6",
+  "compilerType": "solc",
   "userSourceNameMap": {
     "contracts/CTBALAnalytics.sol": "project/contracts/CTBALAnalytics.sol",
     "contracts/CTBALToken.sol": "project/contracts/CTBALToken.sol"
