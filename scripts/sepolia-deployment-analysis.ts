@@ -3,8 +3,8 @@ import { sepolia } from 'viem/chains';
 import * as fs from 'fs';
 
 // Load contract artifacts  
-import CTBALTokenArtifact from '../artifacts/contracts/CTBALToken.sol/CTBALToken.json' assert { type: "json" };
-import CTBALAnalyticsArtifact from '../artifacts/contracts/CTBALAnalytics.sol/CTBALAnalytics.json' assert { type: "json" };
+import CTBALTokenArtifact from '../artifacts/contracts/CTBALToken.sol/CTBALToken.json' with { type: "json" };
+import CTBALAnalyticsArtifact from '../artifacts/contracts/CTBALAnalytics.sol/CTBALAnalytics.json' with { type: "json" };
 
 // Deployed contract addresses on Sepolia
 const TOKEN_ADDRESS = "0x386b7e934f1cfd8169bf8b9d5249ba1ed7e1926f";
