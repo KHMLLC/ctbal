@@ -1,8 +1,10 @@
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-viem";
 import "@nomicfoundation/hardhat-ethers";
-import "@nomicfoundation/hardhat-ignition";
-import "@nomicfoundation/hardhat-ignition-viem";
+// NOTE: Ignition plugins temporarily removed due to Hardhat 3.x compatibility issues
+// import "@nomicfoundation/hardhat-verify";  
+// import "@nomicfoundation/hardhat-ignition";
+// import "@nomicfoundation/hardhat-ignition-viem";
 import "@nomicfoundation/hardhat-mocha";
 import "dotenv/config";
 
